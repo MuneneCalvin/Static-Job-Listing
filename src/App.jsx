@@ -4,15 +4,10 @@ import './App.css'
 
 function App() {
   return (
-    <div>
+    <div className='ourApp'>
 
     <Header />
     <Main />
-
-
-
-
-
 
 
     </div>
