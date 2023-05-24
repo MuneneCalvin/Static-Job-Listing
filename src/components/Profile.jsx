@@ -44,7 +44,7 @@ function Profile() {
       {/* Filter options */}
       <div className="filter-options">
         <label>
-          Role:
+          Role: 
           <select
             value={filters.role}
             onChange={(e) => handleFilterChange('role', e.target.value)}>
@@ -55,7 +55,7 @@ function Profile() {
           </select>
         </label>
         <label>
-          Level:
+          Level: 
           <select
             value={filters.level}
             onChange={(e) => handleFilterChange('level', e.target.value)}>
@@ -66,7 +66,7 @@ function Profile() {
           </select>
         </label>
         <label>
-          Languages:
+          Languages: 
           <select
             value={filters.languages}
             onChange={(e) => handleFilterChange('languages', e.target.value)}>
@@ -79,7 +79,7 @@ function Profile() {
           </select>
         </label>
         <label>
-          Tools:
+          Tools: 
           <select value={filters.tools} onChange={(e) => handleFilterChange('tools', e.target.value)}>
             <option value="">All</option>
             <option value="react">React</option>
