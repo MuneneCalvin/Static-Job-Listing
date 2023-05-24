@@ -3,9 +3,37 @@
     height: 100px;
     width: 70%;
     margin-left: 200px;
-    margin-top: 100px;
+    margin-top: 5px;
     display: flex;
-    
-  
-
+}
+img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+    width: 200px;
+    height: 20px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.position {
+    margin-left: 10px;
+    margin-top: 10px;
+    clear: left;
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 10px;
 }
