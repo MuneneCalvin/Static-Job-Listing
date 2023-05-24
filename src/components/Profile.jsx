@@ -16,15 +16,17 @@ function Profile() {
                     <div className="upper">
                     <p className="current">{
                       current && <p className="current">New!</p>
-                    }</p>  
+                      }
+                      </p>  
                     <p className="featured">{
                     featured && <p className="featured">Featured</p>
-                    }</p>
+                      }
+                      </p>
                     </div>
                 </div>
 
-                <div className="middle">
-                  <h3 className="position">{position}</h3>
+                  <div className="middle">
+                    <h3 className="position">{position}</h3>
                   <div className="right">
                     <h5 className="role">{role}</h5>
                     <h5 className="level">{level}</h5>
@@ -45,7 +47,7 @@ function Profile() {
 
         })}
         
-      
+       
     </div>
   )
 }

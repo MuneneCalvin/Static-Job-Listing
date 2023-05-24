@@ -5,8 +5,10 @@
     -moz-box-shadow: 0px 9px 5px 0px rgba(0,0,0,0.22);
     height: 100px;
     width: 70%;
-    margin-left: 200px;
-    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    margin-bottom: 40px;
     display: flex;
     border-radius: 5px;
     border-left: 5px solid hsl(180, 29%, 50%);
@@ -18,13 +20,14 @@
     padding-left: 10px;
 }
 .left {
-    display: flex;
-    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+  
 }
+
 .top {
     display: flex;
     flex-direction: row;
-    /* border: 1px solid blue; */
     width: 400px;
     height: 20px;
     margin-left: 15px;
@@ -62,8 +65,12 @@
 .middle {
     margin-top: 5px;
     display: flex;
+    flex-direction: row;
     margin-left: 15px;
+    gap: 0.5rem;
+    justify-content: space-between;
 }
+
 .middle .position {
     font-family: league spartan;
     font-size: 15px;
@@ -79,13 +86,15 @@
 .right {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-left: 250px;
+    width: fit-content;
+    margin-right: 10px;
     gap: 0.5rem;
     color: hsl(180, 29%, 50%);
 }
 .role  {
+    
     background-color: hsl(180, 52%, 96%);
     padding: 5px;
     border-radius: 5px;
@@ -122,7 +131,7 @@
     color: white;
 }
 .bottom {
-    font-size: 15px;
+    font-size: 13px;
     display: flex;
     flex-direction: row;
     margin-left: 10px;
@@ -133,4 +142,25 @@
     font-family: league spartan;
     font-weight: 500;
     color: hsl(180, 8%, 52%);
+}
+
+/* Media query for phones with max-with of 600px */
+@media screen and (max-width: 715px) {
+    .card{
+        height: fit-content;
+        width: 100%;
+        flex-direction: column;
+    }
+    #cardimg {
+        height: 50px;
+        width: 50px;
+        margin-top: -45px;
+    }
+
+
+
+
+
+
+    
 }
