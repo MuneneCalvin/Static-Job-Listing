@@ -14,10 +14,10 @@ function Profile() {
                 <div className='top'>
                   <h4 className="companyName">{company}</h4>
                     <p className="current">{
-                      {current} ? <p className="current">New!</p> : null
+                      current && <p className="current">New!</p>
                     }</p>  
                     <p className="featured">{
-                    {featured} ? <p className="featured">Featured</p> : null
+                    featured && <p className="featured">Featured</p>
                     }</p>
                 </div>
 
