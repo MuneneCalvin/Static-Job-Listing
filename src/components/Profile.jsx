@@ -40,15 +40,14 @@ function Profile() {
   });
 
   return (
-    <div>
+    <div id='mainContent'>
       {/* Filter options */}
       <div className="filter-options">
         <label>
           Role:
           <select
             value={filters.role}
-            onChange={(e) => handleFilterChange('role', e.target.value)}
-          >
+            onChange={(e) => handleFilterChange('role', e.target.value)}>
             <option value="">All</option>
             <option value="frontend">Frontend</option>
             <option value="backend">Backend</option>
@@ -59,8 +58,7 @@ function Profile() {
           Level:
           <select
             value={filters.level}
-            onChange={(e) => handleFilterChange('level', e.target.value)}
-          >
+            onChange={(e) => handleFilterChange('level', e.target.value)}>
             <option value="">All</option>
             <option value="junior">Junior</option>
             <option value="midweight">Midweight</option>
@@ -71,8 +69,7 @@ function Profile() {
           Languages:
           <select
             value={filters.languages}
-            onChange={(e) => handleFilterChange('languages', e.target.value)}
-          >
+            onChange={(e) => handleFilterChange('languages', e.target.value)}>
             <option value="">All</option>
             <option value="python">Python</option>
             <option value="ruby">Ruby</option>
@@ -101,8 +98,7 @@ function Profile() {
             <div
               className={`card ${featured ? 'featured-card' : ''}`}
               key={id}
-              style={featured ? { borderLeft: '5px solid lightskyblue' } : {}}
-            >
+              style={featured ? { borderLeft: '5px solid lightskyblue' } : {}} >
               <img src={logo} id="cardimg" alt={company} />
               <div className="left">
                 <div className="top">
