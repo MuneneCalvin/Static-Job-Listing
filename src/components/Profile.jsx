@@ -5,10 +5,10 @@ import StoreData from '../StoreData'
 function Profile() {
   return (
     <div>
+      
         {StoreData.map(({id, company,logo,current, featured,position,role,level,postedAt,contract,location,languages,tools}) => {
-
             return(
-            <div className="card" key={id}>
+              <div className={`card ${featured ? 'featured-card' : ''}`} key={id} style={featured ? { borderLeft: '5px solid lightskyblue' } : {}}>
                 <img src={logo} id='cardimg'/>
                 <div className="left">
                 <div className='top'>
