@@ -23,10 +23,11 @@ function Profile() {
 
                 <div className="middle">
                   <h3 className="position">{position}</h3>
-                  <h6 className="languages">{languages}{tools}</h6>
                   <div className="right">
-                    <h4 className="role">{role}</h4>
-                    <h4 className="level">{level}</h4>
+                    <h5 className="role">{role}</h5>
+                    <h5 className="level">{level}</h5>
+                    <h5 className="languages">{languages}</h5>
+                    <h5 className='tools'>{tools}</h5>
                   </div>
                 </div>
 
