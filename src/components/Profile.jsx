@@ -5,7 +5,7 @@ import StoreData from '../StoreData'
 function Profile() {
   return (
     <div>
-        {StoreData.map(({id, company,logo, featured,position,role,level,postedAt,contract,location,languages,tools}) => {
+        {StoreData.map(({id, company,logo,current, featured,position,role,level,postedAt,contract,location,languages,tools}) => {
 
             return(
             <div className="card" key={id}>
@@ -13,8 +13,12 @@ function Profile() {
                 <div className="left">
                 <div className='top'>
                   <h4 className="companyName">{company}</h4>
-                  {/* <p className="new">{new}</p> */}
-                  <p className="featured">{featured}</p>
+                    <p className="current">{
+                      {current} ? <p className="current">New!</p> : null
+                    }</p>  
+                    <p className="featured">{
+                    {featured} ? <p className="featured">Featured</p> : null
+                    }</p>
                 </div>
 
                 <div className="middle">
