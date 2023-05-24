@@ -11,7 +11,6 @@
     margin-bottom: 15px;
     display: flex;
     border-radius: 5px;
-   
 }
 #mainContent{
     display: flex;
@@ -30,7 +29,6 @@
 .left {
     margin-left: 10px;
     width: 100%;
-  
 }
 
 .top {
@@ -54,14 +52,19 @@
 }
 .upper .current {
     margin-inline: 5px;
+    width: 40px;
+    text-align: center;
     font-family: league spartan;
     font-weight: 700;
     font-size: 15px;
     color: #fff;
     background-color: hsl(180, 29%, 50%);
     border-radius: 15px;
+    
 }
 .upper .featured {
+    width: 70px;
+    text-align: center;
     margin-inline: 5px;
     font-family: league spartan;
     font-weight: 700;
@@ -100,6 +103,7 @@
     margin-right: 10px;
     gap: 0.5rem;
     color: hsl(180, 29%, 50%);
+   
 }
 .role  {
     
@@ -155,8 +159,10 @@
 /* Media query for phones with max-with of 600px */
 @media screen and (max-width: 715px) {
     .card{
+        min-height: 200px;
         height: fit-content;
-        width: 100%;
+
+        width: 90%;
         flex-direction: column;
     }
     #cardimg {
@@ -164,6 +170,32 @@
         width: 50px;
         margin-top: -45px;
     }
+    .middle {
+
+        flex-direction: column;
+    }
+    .middle .position {
+        margin-top: 10px;
+    }
+    .bottom {
+        margin-top: 20px;
+        
+    }
+    .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: fit-content;
+        margin-right: 10px;
+        gap: 0.5rem;
+        color: hsl(180, 29%, 50%);
+        margin-top: 12px;
+       
+    }
+ 
+  
+   
 
 
 
