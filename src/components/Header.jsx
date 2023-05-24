@@ -1,4 +1,4 @@
-import background from '../assets/bg-header-desktop.svg'
+import background from '../images/bg-header-desktop.svg'
 import './Header.css'
 
 export default function Header() {
