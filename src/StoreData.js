@@ -144,7 +144,7 @@ const StoreData = [
       "postedAt": "3w ago",
       "contract": "Full Time",
       "location": "Worldwide",
-      "languages": ["JavaScript  ", "Python "],
+      "languages": ["JavaScript ", "", "Python "],
       "tools": ["Django"]
     },
     {
