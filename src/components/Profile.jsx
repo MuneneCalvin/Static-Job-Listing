@@ -9,22 +9,27 @@ function Profile() {
 
             return(
             <div className="card" key={id}>
-                <img src={logo} />
+                <img src={logo} id='cardimg'/>
                 <div className="left">
                 <div className='top'>
                   <h4 className="companyName">{company}</h4>
                   {/* <p className="new">{new}</p> */}
                   <p className="featured">{featured}</p>
                 </div>
-                <h3 className="position">{position}</h3>
+                <div className="middle">
+                  <h3 className="position">{position}</h3>
+                  <div className="right">
+                    <h4 className="role">{role}</h4>
+                    <h4 className="level">{level}</h4>
+                  </div>
+                </div>
                 <div className="bottom">
                   <p className="postedAt">{postedAt}</p>
                   <p className="fulltime">{contract}</p>
                   <p className="location">{location}</p>
                 </div>
                 </div>
-                <h4 className="role">{role}</h4>
-                <h4 className="level">{level}</h4>
+                
             </div>
             )
 

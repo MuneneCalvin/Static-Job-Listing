@@ -6,11 +6,10 @@
     margin-top: 5px;
     display: flex;
 }
-img {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    padding-top: 10px;
+#cardimg {
+    height: 60px;
+    width: 60px;
+    padding-top: 20px;
     padding-left: 10px;
 }
 .left {
@@ -26,10 +25,16 @@ img {
     margin-left: 15px;
     margin-top: 10px;
 }
-.position {
-    margin-left: 10px;
-    margin-top: 10px;
-    clear: left;
+.middle {
+    margin-top: 5px;
+    display: flex;
+    margin-left: 15px;
+}
+.right {
+    display: flex;
+    flex-direction: row;
+    margin-left: 250px;
+    gap: 0.5rem;
 }
 .bottom {
     display: flex;
