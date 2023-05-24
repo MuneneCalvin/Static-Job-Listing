@@ -1,4 +1,5 @@
 .card{
+    background-color: #fff;
     border: 1px solid black;
     height: 100px;
     width: 70%;
@@ -25,20 +26,76 @@
     margin-left: 15px;
     margin-top: 10px;
 }
+.top .companyName {
+    font-family: league spartan;
+    font-weight: 500;
+    color: hsl(180, 29%, 50%);
+}
 .middle {
     margin-top: 5px;
     display: flex;
     margin-left: 15px;
 }
+.middle .position {
+    font-family: league spartan;
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(180, 2%, 8%);
+}
 .right {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-left: 250px;
     gap: 0.5rem;
+    color: hsl(180, 29%, 50%);
+}
+.role  {
+    background-color: hsl(180, 52%, 96%);
+    padding: 5px;
+    border-radius: 5px;
+}
+.role:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+}
+.level {
+    background-color: hsl(180, 52%, 96%);
+    padding: 5px;
+    border-radius: 5px;
+}
+.level:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+}
+.languages {
+    background-color: hsl(180, 52%, 96%);
+    padding: 5px;
+    border-radius: 5px;
+}
+.languages:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+}
+.tools {
+    background-color: hsl(180, 52%, 96%);
+    padding: 5px;
+    border-radius: 5px;
+}
+.tools:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
 }
 .bottom {
     display: flex;
     flex-direction: row;
     margin-left: 10px;
     margin-top: 10px;
+    gap: 1.5rem;
+}
+.bottom .postedAt .fulltime .location {
+    font-family: league spartan;
+    font-weight: 500;
+    color: hsl(180, 8%, 52%);
 }

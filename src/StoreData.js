@@ -24,7 +24,7 @@ const StoreData = [
       "postedAt": "1d ago",
       "contract": "Full Time",
       "location": "USA Only",
-      "languages": ["HTML", "CSS", "JavaScript"],
+      "languages": ["HTML  ", "CSS  ", "JavaScript"],
       "tools": []
     },
     {
@@ -55,7 +55,7 @@ const StoreData = [
       "contract": "Part Time",
       "location": "USA Only",
       "languages": ["JavaScript"],
-      "tools": ["React", "Sass"]
+      "tools": ["React  ", " Sass"]
     },
     {
       "id": 4,
@@ -69,7 +69,7 @@ const StoreData = [
       "postedAt": "5d ago",
       "contract": "Contract",
       "location": "USA Only",
-      "languages": ["CSS", "JavaScript"],
+      "languages": ["CSS  ", "JavaScript"],
       "tools": []
     },
     {
@@ -85,7 +85,7 @@ const StoreData = [
       "contract": "Full Time",
       "location": "Worldwide",
       "languages": ["JavaScript"],
-      "tools": ["Ruby", "Sass"]
+      "tools": ["Ruby  ", " Sass"]
     },
     {
       "id": 6,
@@ -114,7 +114,7 @@ const StoreData = [
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "Worldwide",
-      "languages": ["HTML", "JavaScript"],
+      "languages": ["HTML  ", " JavaScript"],
       "tools": ["Sass"]
     },
     {
@@ -129,8 +129,8 @@ const StoreData = [
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "USA Only",
-      "languages": ["JavaScript"],
-      "tools": ["Vue", "Sass"]
+      "languages": ["JavaScript "],
+      "tools": ["Vue  ", "Sass"]
     },
     {
       "id": 9,
@@ -144,7 +144,7 @@ const StoreData = [
       "postedAt": "3w ago",
       "contract": "Full Time",
       "location": "Worldwide",
-      "languages": ["JavaScript", "Python"],
+      "languages": ["JavaScript  ", "Python "],
       "tools": ["Django"]
     },
     {
@@ -159,10 +159,9 @@ const StoreData = [
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "Worldwide",
-      "languages": ["JavaScript"],
-      "tools": ["React", "Sass"]
+      "languages": ["JavaScript "],
+      "tools": ["React  ", "Sass"]
     }
   ]
 
   export default StoreData
-  
