@@ -70,6 +70,12 @@
     font-weight: 700;
     color: hsl(180, 2%, 8%);
 }
+.middle .position:hover {
+    font-family: league spartan;
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+}
 .right {
     display: flex;
     flex-direction: row;
