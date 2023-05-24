@@ -1,10 +1,17 @@
-import React from 'react'
-import Profile from './components/Profile'
+import Header from './components/Header'
+import Main from './pages/Main'
+import './App.css'
+
 function App() {
   return (
     <div>
- <h1>HELLO KEMBOI</h1>
- <Profile />
+
+    <Header />
+    <Main />
+
+
+
+
 
 
 
