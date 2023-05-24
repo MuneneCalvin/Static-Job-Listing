@@ -1,10 +1,21 @@
-// import logo from './images'
+
+import photosnapLogo from './images/photosnap.svg';
+import manageLogo from './images/manage.svg';
+import accountLogo from './images/account.svg';
+import myhomeLogo from './images/myhome.svg';
+import loopStudiosLogo from './images/loop-studios.svg';
+import faceitLogo from './images/faceit.svg';
+import shortlyLogo from './images/shortly.svg';
+import insureLogo from './images/insure.svg';
+import eyecamCoLogo from './images/eyecam-co.svg';
+import theAirFilterCompanyLogo from './images/the-air-filter-company.svg';
+
 
 const StoreData = [
     {
       "id": 1,
       "company": "Photosnap",
-      "logo": "./images/photosnap.svg",
+      "logo": photosnapLogo,
       "new": true,
       "featured": true,
       "position": "Senior Frontend Developer",
@@ -19,7 +30,7 @@ const StoreData = [
     {
       "id": 2,
       "company": "Manage",
-      "logo": "./images/manage.svg",
+      "logo": manageLogo,
       "new": true,
       "featured": true,
       "position": "Fullstack Developer",
@@ -34,7 +45,7 @@ const StoreData = [
     {
       "id": 3,
       "company": "Account",
-      "logo": "./images/account.svg",
+      "logo": accountLogo,
       "new": true,
       "featured": false,
       "position": "Junior Frontend Developer",
@@ -49,7 +60,7 @@ const StoreData = [
     {
       "id": 4,
       "company": "MyHome",
-      "logo": "./images/myhome.svg",
+      "logo": myhomeLogo,
       "new": false,
       "featured": false,
       "position": "Junior Frontend Developer",
@@ -64,7 +75,7 @@ const StoreData = [
     {
       "id": 5,
       "company": "Loop Studios",
-      "logo": "./images/loop-studios.svg",
+      "logo": loopStudiosLogo,
       "new": false,
       "featured": false,
       "position": "Software Engineer",
@@ -79,7 +90,7 @@ const StoreData = [
     {
       "id": 6,
       "company": "FaceIt",
-      "logo": "./images/faceit.svg",
+      "logo": faceitLogo,
       "new": false,
       "featured": false,
       "position": "Junior Backend Developer",
@@ -94,7 +105,7 @@ const StoreData = [
     {
       "id": 7,
       "company": "Shortly",
-      "logo": "./images/shortly.svg",
+      "logo": shortlyLogo,
       "new": false,
       "featured": false,
       "position": "Junior Developer",
@@ -109,7 +120,7 @@ const StoreData = [
     {
       "id": 8,
       "company": "Insure",
-      "logo": "./images/insure.svg",
+      "logo": insureLogo,
       "new": false,
       "featured": false,
       "position": "Junior Frontend Developer",
@@ -124,7 +135,7 @@ const StoreData = [
     {
       "id": 9,
       "company": "Eyecam Co.",
-      "logo": "./images/eyecam-co.svg",
+      "logo": eyecamCoLogo,
       "new": false,
       "featured": false,
       "position": "Full Stack Engineer",
@@ -139,7 +150,7 @@ const StoreData = [
     {
       "id": 10,
       "company": "The Air Filter Company",
-      "logo": "./images/the-air-filter-company.svg",
+      "logo": theAirFilterCompanyLogo,
       "new": false,
       "featured": false,
       "position": "Front-end Dev",
