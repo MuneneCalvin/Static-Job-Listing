@@ -1,11 +1,15 @@
 .card{
     background-color: #fff;
-    border: 1px solid black;
+    box-shadow: 0px 9px 5px 0px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0px 9px 5px 0px rgba(0,0,0,0.22);
+    -moz-box-shadow: 0px 9px 5px 0px rgba(0,0,0,0.22);
     height: 100px;
     width: 70%;
     margin-left: 200px;
-    margin-top: 5px;
+    margin-top: 20px;
     display: flex;
+    border-radius: 5px;
+    border-left: 5px solid hsl(180, 29%, 50%);
 }
 #cardimg {
     height: 60px;
@@ -20,16 +24,40 @@
 .top {
     display: flex;
     flex-direction: row;
-    border: 1px solid blue;
-    width: 200px;
+    /* border: 1px solid blue; */
+    width: 400px;
     height: 20px;
     margin-left: 15px;
     margin-top: 10px;
+    gap: 2.5rem;
 }
 .top .companyName {
     font-family: league spartan;
-    font-weight: 500;
+    font-weight: 800;
     color: hsl(180, 29%, 50%);
+}
+.upper {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.upper .current {
+    margin-inline: 5px;
+    font-family: league spartan;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 15px;
+}
+.upper .featured {
+    margin-inline: 5px;
+    font-family: league spartan;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    background-color: hsl(180, 14%, 20%);
+    border-radius: 15px;
 }
 .middle {
     margin-top: 5px;
@@ -88,6 +116,7 @@
     color: white;
 }
 .bottom {
+    font-size: 15px;
     display: flex;
     flex-direction: row;
     margin-left: 10px;
