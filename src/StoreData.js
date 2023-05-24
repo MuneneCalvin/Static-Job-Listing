@@ -1,4 +1,6 @@
-[
+// import logo from './images'
+
+const StoreData = [
     {
       "id": 1,
       "company": "Photosnap",
@@ -150,4 +152,6 @@
       "tools": ["React", "Sass"]
     }
   ]
+
+  export default StoreData
   
