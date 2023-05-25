@@ -6,8 +6,7 @@ function Profile() {
   const [filters, setFilters] = useState({role: '',level: '',languages: '',tools: '',}); //This is the state were filter value will be stored
 
   //This will  Handle filter change
-  const handleFilterChange = (category, value) => {setFilters((prevFilters) => ({ ...prevFilters,[category]: value,}));
-  };
+  const handleFilterChange = (category, value) => {setFilters((prevFilters) => ({ ...prevFilters,[category]: value,}));};
   // Filter job listings based on the selected filters
   const filteredData = StoreData.filter((job) => {
     const { role, level, languages, tools } = filters;//This will destructure the filter values from the state
@@ -15,12 +14,9 @@ function Profile() {
     const jobCategories = {role: job.role.toLowerCase(),level: job.level.toLowerCase(),languages: job.languages.map((language) => language.toLowerCase()),
       tools: job.tools.map((tool) => tool.toLowerCase()),
     };
-
     // in this section we wil Check if each filter category matches the job categories
-
       // Check if the role filter matches or if no role filter is selected
-    const roleMatch = role === '' || jobCategories.role === role;
-   
+    const roleMatch = role === '' || jobCategories.role === role;  
      // Check if the level filter matches or if no level filter is selected
     const levelMatch = level === '' || jobCategories.level === level;
     // Check if the languages filter matches or if no languages filter is selected
@@ -93,7 +89,6 @@ function Profile() {
                     {featured && <p className="featured">Featured</p>}
                   </div>
                 </div>
-
                 <div className="middle">
                   <h3 className="position">{position}</h3>
                   <div className="right">
@@ -103,7 +98,6 @@ function Profile() {
                     <h5 className="tools">{tools}</h5>
                   </div>
                 </div>
-
                 <div className="bottom">
                   <p className="postedAt">{postedAt}</p>
                   <p className="fulltime">{contract}</p>
