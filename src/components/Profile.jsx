@@ -3,51 +3,42 @@ import './profile.css';
 import StoreData from '../StoreData';
 
 function Profile() {
-  const [filters, setFilters] = useState({
-    role: '',
-    level: '',
-    languages: '',
-    tools: '',
-  });
+  const [filters, setFilters] = useState({role: '',level: '',languages: '',tools: '',}); //This is the state were filter value will be stored
 
-  // Handle filter change
-  const handleFilterChange = (category, value) => {
-    setFilters((prevFilters) => ({
-      ...prevFilters,
-      [category]: value,
-    }));
+  //This will  Handle filter change
+  const handleFilterChange = (category, value) => {setFilters((prevFilters) => ({ ...prevFilters,[category]: value,}));
   };
-
   // Filter job listings based on the selected filters
   const filteredData = StoreData.filter((job) => {
-    const { role, level, languages, tools } = filters;
-    const jobCategories = {
-      role: job.role.toLowerCase(),
-      level: job.level.toLowerCase(),
-      languages: job.languages.map((language) => language.toLowerCase()),
+    const { role, level, languages, tools } = filters;//This will destructure the filter values from the state
+    //We have mapped job categories to lowercase for case-insensitive comparison.
+    const jobCategories = {role: job.role.toLowerCase(),level: job.level.toLowerCase(),languages: job.languages.map((language) => language.toLowerCase()),
       tools: job.tools.map((tool) => tool.toLowerCase()),
     };
 
-    // Check if each filter category matches the job categories
+    // in this section we wil Check if each filter category matches the job categories
+
+      // Check if the role filter matches or if no role filter is selected
     const roleMatch = role === '' || jobCategories.role === role;
+   
+     // Check if the level filter matches or if no level filter is selected
     const levelMatch = level === '' || jobCategories.level === level;
-    const languagesMatch =
-      languages === '' || jobCategories.languages.includes(languages);
+    // Check if the languages filter matches or if no languages filter is selected
+    const languagesMatch = languages === '' || jobCategories.languages.includes(languages);
+      // Check if the tools filter matches or if no tools filter is selected
     const toolsMatch = tools === '' || jobCategories.tools.includes(tools);
 
     // Return true if all filter categories match
     return roleMatch && levelMatch && languagesMatch && toolsMatch;
   });
-
+//Here will start rerendering the components
   return (
     <div id='mainContent'>
       {/* Filter options */}
       <div className="filter-options">
         <label>
           Role:
-          <select
-            value={filters.role}
-            onChange={(e) => handleFilterChange('role', e.target.value)}>
+          <select value={filters.role} onChange={(e) => handleFilterChange('role', e.target.value)}>
             <option value="">All</option>
             <option value="frontend">Frontend</option>
             <option value="backend">Backend</option>
@@ -56,9 +47,7 @@ function Profile() {
         </label>
         <label>
           Level:
-          <select
-            value={filters.level}
-            onChange={(e) => handleFilterChange('level', e.target.value)}>
+          <select value={filters.level} onChange={(e) => handleFilterChange('level', e.target.value)}>
             <option value="">All</option>
             <option value="junior">Junior</option>
             <option value="midweight">Midweight</option>
@@ -67,9 +56,7 @@ function Profile() {
         </label>
         <label>
           Languages:
-          <select
-            value={filters.languages}
-            onChange={(e) => handleFilterChange('languages', e.target.value)}>
+          <select value={filters.languages} onChange={(e) => handleFilterChange('languages', e.target.value)}>
             <option value="">All</option>
             <option value="python">Python</option>
             <option value="ruby">Ruby</option>
@@ -96,9 +83,7 @@ function Profile() {
         ({ id, company, logo, current, featured, position, role, level, postedAt, contract, location, languages, tools }) => {
           return (
             <div
-              className={`card ${featured ? 'featured-card' : ''}`}
-              key={id}
-              style={featured ? { borderLeft: '5px solid lightskyblue' } : {}} >
+              className={`card ${featured ? 'featured-card' : ''}`} key={id} style={featured ? { borderLeft: '5px solid lightskyblue' } : {}} >
               <img src={logo} id="cardimg" alt={company} />
               <div className="left">
                 <div className="top">
