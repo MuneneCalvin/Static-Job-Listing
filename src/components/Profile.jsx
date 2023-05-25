@@ -49,7 +49,7 @@ function Profile() {
           languages,
           tools,
         }) => (
-          <div className="card" key={id}>
+          <div className={`card ${featured ? 'featured-card' : ''}`}  key={id} style={featured ? {borderLeft: '5px solid lightskyblue'} : {}} >
             <img src={logo} alt="Company Logo" id="cardimg" />
             <div className="left">
               <div className="top">
