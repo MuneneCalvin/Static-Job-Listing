@@ -66,7 +66,7 @@ function Profile() {
           </select>
         </label>
         <label>
-          Tools:
+          Tools: 
           <select value={filters.tools} onChange={(e) => handleFilterChange('tools', e.target.value)}>
             <option value="">All</option>
             <option value="react">React</option>
