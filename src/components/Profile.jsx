@@ -1,112 +1,79 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './profile.css';
 import StoreData from '../StoreData';
 
 function Profile() {
-  const [filters, setFilters] = useState({role: '',level: '',languages: '',tools: '',}); //This is the state were filter value will be stored
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
-  //This will  Handle filter change
-  const handleFilterChange = (category, value) => {setFilters((prevFilters) => ({ ...prevFilters,[category]: value,}));};
-  // Filter job listings based on the selected filters
-  const filteredData = StoreData.filter((job) => {
-    const { role, level, languages, tools } = filters;//This will destructure the filter values from the state
-    //We have mapped job categories to lowercase for case-insensitive comparison.
-    const jobCategories = {role: job.role.toLowerCase(),level: job.level.toLowerCase(),languages: job.languages.map((language) => language.toLowerCase()),
-      tools: job.tools.map((tool) => tool.toLowerCase()),
-    };
-    // in this section we wil Check if each filter category matches the job categories
-      // Check if the role filter matches or if no role filter is selected
-    const roleMatch = role === '' || jobCategories.role === role;  
-     // Check if the level filter matches or if no level filter is selected
-    const levelMatch = level === '' || jobCategories.level === level;
-    // Check if the languages filter matches or if no languages filter is selected
-    const languagesMatch = languages === '' || jobCategories.languages.includes(languages);
-      // Check if the tools filter matches or if no tools filter is selected
-    const toolsMatch = tools === '' || jobCategories.tools.includes(tools);
+  // Filter the data based on the selected filters
+  const filteredData =
+    selectedFilters.length === 0
+      ? StoreData // Show all data when no filters are selected
+      : StoreData.filter(({ position, role, level }) => {
+          // Check if the card's features match any of the selected filters
+          return selectedFilters.includes(position) || selectedFilters.includes(role) || selectedFilters.includes(level);
+        });
 
-    // Return true if all filter categories match
-    return roleMatch && levelMatch && languagesMatch && toolsMatch;
-  });
-//Here will start rerendering the components
   return (
-    <div id='mainContent'>
-      {/* Filter options */}
-      <div className="filter-options">
-        <label>
-          Role:
-          <select value={filters.role} onChange={(e) => handleFilterChange('role', e.target.value)}>
-            <option value="">All</option>
-            <option value="frontend">Frontend</option>
-            <option value="backend">Backend</option>
-            <option value="fullstack">Fullstack</option>
-          </select>
-        </label>
-        <label>
-          Level:
-          <select value={filters.level} onChange={(e) => handleFilterChange('level', e.target.value)}>
-            <option value="">All</option>
-            <option value="junior">Junior</option>
-            <option value="midweight">Midweight</option>
-            <option value="senior">Senior</option>
-          </select>
-        </label>
-        <label>
-          Languages:
-          <select value={filters.languages} onChange={(e) => handleFilterChange('languages', e.target.value)}>
-            <option value="">All</option>
-            <option value="python">Python</option>
-            <option value="ruby">Ruby</option>
-            <option value="javascript">JavaScript</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-          </select>
-        </label>
-        <label>
-          Tools: 
-          <select value={filters.tools} onChange={(e) => handleFilterChange('tools', e.target.value)}>
-            <option value="">All</option>
-            <option value="react">React</option>
-            <option value="sass">Sass</option>
-            <option value="vue">Vue</option>
-            <option value="django">Django</option>
-            <option value="ror">RoR (Ruby on Rails)</option>
-          </select>
-        </label>
+    <div>
+      <div className='btnFilter'>
+
+        <div className="first-btn">
+        <button onClick={() => setSelectedFilters([])}>All</button>
+        <button onClick={() => setSelectedFilters(['Frontend'])}>Frontend</button>
+          <button onClick={() => setSelectedFilters(['Backend'])}>Backend</button>
+        </div>
+        <div className="second-btn">
+        <button onClick={() => setSelectedFilters(['Fullstack'])}>Fullstack</button>
+          <button onClick={() => setSelectedFilters(['Junior'])}>Junior</button>
+        </div>
+        <div className="third-btn">
+        <button onClick={() => setSelectedFilters(['Midweight'])}>Midweight</button>
+          <button onClick={() => setSelectedFilters(['Senior'])}>Senior</button>
+          </div>
       </div>
 
-      {/* Job listings */}
       {filteredData.map(
-        ({ id, company, logo, current, featured, position, role, level, postedAt, contract, location, languages, tools }) => {
-          return (
-            <div
-              className={`card ${featured ? 'featured-card' : ''}`} key={id} style={featured ? { borderLeft: '5px solid lightskyblue' } : {}} >
-              <img src={logo} id="cardimg" alt={company} />
-              <div className="left">
-                <div className="top">
-                  <h4 className="companyName">{company}</h4>
-                  <div className="upper">
-                    {current && <p className="current">New!</p>}
-                    {featured && <p className="featured">Featured</p>}
-                  </div>
-                </div>
-                <div className="middle">
-                  <h3 className="position">{position}</h3>
-                  <div className="right">
-                    <h5 className="role">{role}</h5>
-                    <h5 className="level">{level}</h5>
-                    <h5 className="languages">{languages}</h5>
-                    <h5 className="tools">{tools}</h5>
-                  </div>
-                </div>
-                <div className="bottom">
-                  <p className="postedAt">{postedAt}</p>
-                  <p className="fulltime">{contract}</p>
-                  <p className="location">{location}</p>
+        ({
+          id,
+          company,
+          logo,
+          current,
+          featured,
+          position,
+          role,
+          level,
+          postedAt,
+          contract,
+          location,
+          languages,
+          tools,
+        }) => (
+          <div className="card" key={id}>
+            <img src={logo} alt="Company Logo" id="cardimg" />
+            <div className="left">
+              <div className="top">
+                <h4 className="companyName">{company}</h4>
+                {current && <p className="current">New!</p>}
+                {featured && <p className="featured">Featured</p>}
+              </div>
+              <div className="middle">
+                <h3 className="position">{position}</h3>
+                <div className="right">
+                  <h5 className="role">{role}</h5>
+                  <h5 className="level">{level}</h5>
+                  <h5 className="languages">{languages}</h5>
+                  <h5 className="tools">{tools}</h5>
                 </div>
               </div>
+              <div className="bottom">
+                <p className="postedAt">{postedAt}</p>
+                <p className="fulltime">{contract}</p>
+                <p className="location">{location}</p>
+              </div>
             </div>
-          );
-        }
+          </div>
+        )
       )}
     </div>
   );

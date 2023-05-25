@@ -4,7 +4,7 @@ import './Header.css'
 export default function Header() {
   return (
     <div id='header' >
-      <img src={background} alt='' />
+      <img src={background} alt='' className='headerIMG' />
     </div>
   )
 }

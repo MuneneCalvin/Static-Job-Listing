@@ -25,6 +25,44 @@
     display: flex;
     border-radius: 5px;
 }
+
+/* added button filters */
+.btnFilter{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    gap: 20px;
+}
+.first-btn{
+    display: flex;
+    gap: 20px;
+
+}
+.second-btn{
+    display: flex;
+    gap: 20px; 
+}
+.third-btn{
+    display: flex;
+    gap: 20px; 
+}
+.btnFilter button{
+    padding: 4px;
+    border-radius: 5px;
+  
+}
+.btnFilter button:hover{
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+
+}
+
+
+/* added button filters */
+
+
 #mainContent{
     display: flex;
     flex-direction: column;
@@ -174,17 +212,54 @@
     .card{
         min-height: 200px;
         height: fit-content;
-
-        width: 90%;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        width: fit-content;
         flex-direction: column;
     }
+
+
+/* added button filters */
+.btnFilter{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    gap: 10px;
+}
+.first-btn{
+    display: flex;
+    gap: 10px;
+
+}
+.second-btn{
+    display: flex;
+    gap: 10px; 
+}
+.third-btn{
+    display: flex;
+    gap: 10px; 
+}
+.btnFilter button{
+    padding: 4px;
+    border-radius: 5px;
+  
+}
+.btnFilter button:hover{
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+
+}
+
+/* added button filters */
+
     #cardimg {
         height: 50px;
         width: 50px;
         margin-top: -45px;
     }
     .middle {
-
         flex-direction: column;
     }
     .middle .position {
@@ -201,19 +276,40 @@
         align-items: center;
         width: fit-content;
         margin-right: 10px;
-        gap: 0.5rem;
-        color: hsl(180, 29%, 50%);
         margin-top: 12px;
        
     }
- 
+
+}
+
+
+@media screen and (max-width: 480px) {
+.btnFilter{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    gap: 10px;
+}
+.first-btn{
+    flex-direction: column;
+    gap: 10px;
+
+}
+.second-btn{
+    flex-direction: column;
+    gap: 10px; 
+}
+.third-btn{
+    flex-direction: column;
+    gap: 4px; 
+}
+.btnFilter button{
+    padding: 4px;
+    border-radius: 5px;
   
-   
+}
 
 
-
-
-
-
-    
 }
